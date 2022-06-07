@@ -6,6 +6,11 @@ import com.example.retrofit.model.user
 import com.example.retrofitdemo.api.RetrofitInstance
 import com.example.userauthentication.data.DataSorce
 import com.example.userauthentication.data.cache.data.User
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import retrofit2.Response
 import javax.inject.Inject
 class RemoteDataSorce
@@ -29,6 +34,16 @@ constructor() : DataSorce {
     override suspend fun user_exist_locallStorage(username: String, password: String): Boolean {
         return true;
     }
+
+    override fun getDataUsingFlow(): Flow<List<user>> {
+
+        return flow{
+           val b=RetrofitInstance.api.getUsersUsingFlow()
+           emit(b)
+        }.flowOn(Dispatchers.Default)
+
+    }
+
 
 
 }

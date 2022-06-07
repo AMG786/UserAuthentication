@@ -1,11 +1,10 @@
-package com.example.userauthentication.ui
+package com.example.userauthentication.presentation
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.userauthentication.databinding.ActivitySignupScreenBinding
-import com.example.userauthentication.presentation.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject

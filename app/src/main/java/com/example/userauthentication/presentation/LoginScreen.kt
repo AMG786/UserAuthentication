@@ -1,4 +1,4 @@
-package com.example.userauthentication.ui
+package com.example.userauthentication.presentation
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.userauthentication.databinding.ActivityLoginScreenBinding
-import com.example.userauthentication.presentation.UserViewModel
 import androidx.lifecycle.Observer
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -32,7 +31,6 @@ class LoginScreen : AppCompatActivity(),CoroutineScope {
         binding = ActivityLoginScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         job=Job()
-
         binding.login.setOnClickListener {
 
             val c:Context=this
@@ -91,6 +89,7 @@ class LoginScreen : AppCompatActivity(),CoroutineScope {
             mUserViewModel.LoginUser(binding.username.text.toString()
                 ,binding.password.text.toString())
         }
+
     }
 
 }

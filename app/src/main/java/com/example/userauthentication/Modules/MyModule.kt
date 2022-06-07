@@ -17,7 +17,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.Job
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
@@ -44,7 +43,7 @@ class MyModule {
     // View Model
     @Singleton
     @Provides
-    fun provide_UserViewModel(application: Application,userLogin: UserLogin,userSignUp: UserSignUp):UserViewModel{
+    fun provide_UserViewModel(application: Application,userLogin: UserLogin,userSignUp: UserSignUp): UserViewModel {
         return UserViewModel(application,userLogin,userSignUp)
     }
 

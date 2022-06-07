@@ -6,6 +6,7 @@ import com.example.userauthentication.Modules.CacheSorce
 import com.example.userauthentication.Modules.RemoteSorce
 import com.example.userauthentication.data.cache.data.User
 import com.example.userauthentication.domain.repository.Repository
+import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -35,5 +36,12 @@ constructor(
            return dataSorce1.user_exist_locallStorage(username,password)
     }
 
+    override fun getdata1(): Flow<List<user>> {
+        return dataSorce1.getDataUsingFlow()
+    }
+
+    override fun getdata2(): Flow<List<user>> {
+        return dataSorce2.getDataUsingFlow()
+    }
 
 }

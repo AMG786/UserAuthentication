@@ -1,4 +1,4 @@
-package com.example.userauthentication.ui
+package com.example.userauthentication.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
