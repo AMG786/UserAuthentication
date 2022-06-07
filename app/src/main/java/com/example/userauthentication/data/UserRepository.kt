@@ -2,8 +2,8 @@ package com.example.userauthentication.data
 
 import androidx.lifecycle.LiveData
 import com.example.retrofit.model.user
-import com.example.userauthentication.Modules.CacheSorce
-import com.example.userauthentication.Modules.RemoteSorce
+import com.example.userauthentication.di.CacheSorce
+import com.example.userauthentication.di.RemoteSorce
 import com.example.userauthentication.data.cache.data.User
 import com.example.userauthentication.domain.repository.Repository
 import kotlinx.coroutines.flow.Flow

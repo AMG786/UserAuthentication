@@ -1,4 +1,4 @@
-package com.example.userauthentication.Modules
+package com.example.userauthentication.di
 
 import android.app.Application
 import com.example.userauthentication.data.DataSorce
